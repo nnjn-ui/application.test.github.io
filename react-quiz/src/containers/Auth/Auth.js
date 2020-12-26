@@ -23,10 +23,12 @@ export default class Auth extends Component {
                 <div>
                     <h1>Авторизация</h1>
 
-                    <from onSubmit={this.submitHandler} className={classes.AuthForm}>
+                    <form onSubmit={this.submitHandler} className={classes.AuthForm}>
                         <Input label="Email" />
 
-                        <Input label="Пароль" />
+                        <Input 
+                            label="Пароль" 
+                        />
 
                         <Button type="success" 
                         onClick={this.loginHandler}>
@@ -37,7 +39,7 @@ export default class Auth extends Component {
                         onClick={this.registerHandler}>
                             Зарегистрироваться
                         </Button>
-                    </from>
+                    </form>
                 </div>
             </div>
         )
