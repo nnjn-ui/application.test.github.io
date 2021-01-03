@@ -57,9 +57,9 @@ export default class QuizList extends Component {
                             </ul>
                         
                     }
-                    <ul>
+                    {/* <ul>
                         { this.renderQuizes() }
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         )
