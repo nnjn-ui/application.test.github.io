@@ -5,10 +5,12 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker';
 
+
+
 const app = (
     <BrowserRouter>
         <App />
-    </BrowserRouter>
+    </BrowserRouter>   
 )
 
 ReactDOM.render(app, document.getElementById('root'));
