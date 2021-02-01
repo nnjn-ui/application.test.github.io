@@ -36,9 +36,7 @@ export function autoLogout(time) {
 }            
 
 export function logout() {
-    localStorage.removeitem('token')
-    localStorage.removeitem('userId')
-    localStorage.removeitem('expirationDate')
+    
     return {
         type: AUTH_LOGOUT
     }

@@ -7,6 +7,7 @@ import Auth from './containers/Auth/Auth'
 import QuizCreator from './containers/QuizCreator/QuizCreator'
 import {connect} from 'react-redux'
 import Logout from './components/Logout/Logout'
+import {autoLogin} from './store/actions/auth'
 
 
 class App extends Component {
@@ -59,4 +60,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default withRouter(connect(mapStateToProps)(App))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
