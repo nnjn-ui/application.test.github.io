@@ -1,10 +1,10 @@
 .QuizList {
     display: flex;
     justify-content: center;
-    padding: 100px;
+    padding-top: 100px;
     flex-grow: 1;
     width: 100%;
-    background: linear-gradient(90deg, #fd8355 0%, #f0576c 37%, #f79cbd 100% );
+    background: linear-gradient(90deg, #fd8355 0%, #f0576c 37%, #f79cbd 100%);
 }
 
 .QuizList h1 {
@@ -21,7 +21,7 @@
     margin-bottom: 10px;
 }
 
-.QuizList a {
+.QuizList li a {
     text-decoration: none;
     color: #fff;
 }

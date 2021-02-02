@@ -5,7 +5,7 @@
     bottom: 0;
     width: 80%;
     max-width: 300px;
-    padding: 20px 30px;
+    padding: 20px 10px;
     box-sizing: border-box;
     background: #fff;
     transform: translateX(0px);
@@ -28,7 +28,7 @@
 }
 
 .Drawer ul li a {
-    color: #363f54;
+    color: #363d54;
     font-size: 30px;
     text-decoration: none;
     background-color: #fff;
@@ -40,3 +40,4 @@
 .Drawer ul li a:hover, .active {
     opacity: .7;
 }
+
