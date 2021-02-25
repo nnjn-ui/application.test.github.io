@@ -7,7 +7,7 @@ import Auth from './containers/Auth/Auth'
 import QuizCreator from './containers/QuizCreator/QuizCreator'
 import {connect} from 'react-redux'
 import Logout from './components/Logout/Logout'
-import {autoLogin} from './store/actions/auth';
+import { autoLogin } from './store/actions/auth'
 
 class App extends Component {
 
@@ -17,7 +17,7 @@ class App extends Component {
 
   render() {
 
-    let routes = (
+    let routs = (
       <Switch>
         <Route path="/auth" component={Auth} />
         <Route path="/quiz/:id" component={Quiz} />
@@ -27,20 +27,20 @@ class App extends Component {
     )
 
     if (this.props.isAuthenticated) {
-      routes = (
-        <Switch>
-          <Route path="/quiz-creator" component={QuizCreator} />
-          <Route path="/quiz/:id" component={Quiz} />
-          <Route path="/logout" component={Logout} />
-          <Route path="/" exact component={QuizList} />
-          <Redirect to="/" />
-        </Switch>
+      routs = (
+      <Switch>
+        <Route path="/quiz-creator" component={QuizCreator} />
+        <Route path="/quiz/:id" component={Quiz} />
+        <Route path="/logout" component={Logout} />
+        <Route path="/" exact component={QuizList} />
+        <Redirect to="/" />
+      </Switch>
       )
     }
 
     return (
       <Layout>
-        { routes }
+       { routs }
       </Layout>
     )
   }
@@ -54,7 +54,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    autoLogin: () => dispatch(autoLogin())
+    autoLogin: () => dispatch(autoLogin)
   }
 }
 

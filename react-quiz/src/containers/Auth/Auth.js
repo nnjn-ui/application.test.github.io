@@ -6,7 +6,9 @@ import is from 'is_js'
 import {connect} from 'react-redux'
 import {auth} from '../../store/actions/auth'
 
-class Auth extends Component {
+
+
+ class Auth extends Component {
 
   state = {
     isFormValid: false,
@@ -38,21 +40,20 @@ class Auth extends Component {
     }
   }
 
-  loginHandler = () => {
-    this.props.auth(
+  loginHandler =  () => {
+    this.props.auth (
       this.state.formControls.email.value,
       this.state.formControls.password.value,
       true
     )
   }
 
-  registerHandler = () => {
+  registerHandler =  () => {
     this.props.auth(
       this.state.formControls.email.value,
       this.state.formControls.password.value,
       false
     )
-
   }
 
   submitHandler = event => {

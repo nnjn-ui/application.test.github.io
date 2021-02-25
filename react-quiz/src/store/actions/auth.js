@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {AUTH_LOGOUT, AUTH_SUCCESS} from './actionTypes';
+import {AUTH_SUCCESS, AUTH_LOGOUT} from './actionTypes';
 
 export function auth(email, password, isLogin) {
   return async dispatch => {
@@ -8,10 +8,10 @@ export function auth(email, password, isLogin) {
       returnSecureToken: true
     }
 
-    let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyADOCSDZsZy0cV0KMji5A0gBjzE-0iZ7Xg'
+    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyADOCSDZsZy0cV0KMji5A0gBjzE-0iZ7Xg'
 
     if (isLogin) {
-      url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyADOCSDZsZy0cV0KMji5A0gBjzE-0iZ7Xg'
+      url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyADOCSDZsZy0cV0KMji5A0gBjzE-0iZ7Xg'
     }
 
     const response = await axios.post(url, authData)
@@ -44,6 +44,7 @@ export function logout() {
     type: AUTH_LOGOUT
   }
 }
+
 
 
 export function autoLogin() {
