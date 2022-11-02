@@ -17,7 +17,7 @@ import {auth} from '../../store/actions/auth'
         value: '',
         type: 'email',
         label: 'Email',
-        errorMessage: 'Введите корректный email',
+        errorMessage: 'Enter correct email',
         valid: false,
         touched: false,
         validation: {
@@ -28,8 +28,8 @@ import {auth} from '../../store/actions/auth'
       password: {
         value: '',
         type: 'password',
-        label: 'Пароль',
-        errorMessage: 'Введите корректный пароль',
+        label: 'Password',
+        errorMessage: 'Enter correct password',
         valid: false,
         touched: false,
         validation: {
@@ -126,7 +126,7 @@ import {auth} from '../../store/actions/auth'
     return (
       <div className={classes.Auth}>
         <div>
-          <h1>Авторизация</h1>
+          <h1>Authorization</h1>
 
           <form onSubmit={this.submitHandler} className={classes.AuthForm}>
 
@@ -137,7 +137,7 @@ import {auth} from '../../store/actions/auth'
               onClick={this.loginHandler}
               disabled={!this.state.isFormValid}
             >
-              Войти
+              Sign in
             </Button>
 
             <Button
@@ -145,7 +145,7 @@ import {auth} from '../../store/actions/auth'
               onClick={this.registerHandler}
               disabled={!this.state.isFormValid}
             >
-              Зарегистрироваться
+              Registration
             </Button>
           </form>
         </div>
