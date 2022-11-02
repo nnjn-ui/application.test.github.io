@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "react-quiz/build",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",

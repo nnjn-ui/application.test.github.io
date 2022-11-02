@@ -34,7 +34,7 @@ export default class QuizList extends Component {
       Object.keys(response.data).forEach((key, index) => {
         quizes.push({
           id: key,
-          name: `Тест №${index + 1}`
+          name: `Test №${index + 1}`
         })
       })
 
@@ -50,7 +50,7 @@ export default class QuizList extends Component {
     return (
       <div className={classes.QuizList}>
         <div>
-          <h1>Список тестов</h1>
+          <h1>List of tests</h1>
 
           {
             this.state.loading
