@@ -9,6 +9,7 @@ import {connect} from 'react-redux'
 import Logout from './components/Logout/Logout'
 import { autoLogin } from './store/actions/auth'
 
+
 class App extends Component {
 
   componentDidMount() {

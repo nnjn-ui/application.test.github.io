@@ -36,7 +36,7 @@ const FinishedQuiz = props => {
         }) }
       </ul>
 
-      <p>Correctly {successCount} из {props.quiz.length}</p>
+      <p>Correctly {successCount} of {props.quiz.length}</p>
 
       <div>
         <Button onClick={props.onRetry} type="primary">Repeat</Button>
